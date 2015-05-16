@@ -24,6 +24,10 @@ hr.light {
     border-color: #fff;
 }
 
+hr.dark {
+    border-color: #000;
+}
+
 a {
     color: #f05f40;
     -webkit-transition: all .35s;
@@ -55,9 +59,18 @@ p {
     background-color: #f05f40;
 }
 
+.bg-about {
+    background-color: #48B6F6;
+}
+
 .bg-dark {
     color: #fff;
     background-color: #222;
+}
+
+.text-about {
+    color: black;
+    font-weight: 500;
 }
 
 .text-faded {
@@ -241,6 +254,12 @@ header .header-content .header-content-inner p {
 
 .section-heading {
     margin-top: 0;
+}
+
+.about-heading {
+    margin-top: 0;
+    font-weight: 700;
+    color: black;
 }
 
 .service-box {
