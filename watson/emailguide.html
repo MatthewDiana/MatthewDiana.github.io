@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Binghamton Watson Dean's Office Resources</title>
+	</head>
+	<body>
+		<center>
+			<h1><u>Mass E-mail Guide</u></h1>
+			<h2>
+				<a href="http://www.binghamton.edu/watson/email/gradacceptance.html" target="_blank">SAMPLE E-MAIL LAYOUT</a> | 
+				<a href="https://docs.google.com/a/binghamton.edu/spreadsheet/ccc?key=0Apmr0rxvJkWTdDExaDEwcUx5N00yN0JJN0pUYk5PclE&usp=sharing" target="_blank">SAMPLE SPREADSHEET</a><br />
+			</h2>
+			<hr width="50%">
+
+
+			<h2><b><u>Step 1: Uploading the Images</u></b></h2>
+			<p>
+				In order for your images to show up correctly in the e-mail, they need to be hosted online. To do this, you could either upload the images to OmniUpdate or use a reliable image hosting website (such as <a href="http://www.imgur.com/">www.imgur.com</a>) to upload your images. Copy the direct URL
+			</p>
+
+			<h2><b><u>Step 2: Editing the E-mail</u></b></h2>
+			<p>
+				After uploading our images, we can begin editing the e-mail. Open the SAMPLE E-MAIL LAYOUT (at the top of the page). Once you are there, highlight all of the contents on the page (Press CTRL + A), and copy it to the clipboard (Press CTRL + C). The easiest and quickest way to edit the page is to just use Microsoft Word. Open up a blank word document, and then paste your clipboard (Press CTRL + V) into the document. You should get something that looks like the picture below:
+
+				<br /><br /><img src="http://i.imgur.com/X6636jV.png"><br /><br />
+
+				Now you can edit the text, add images, etc. When you are finished editing the e-mail, you must save it as an HTML document. Hit File -> Save As and save it as a Webpage (with the same name as used above). Open the HTML file that you saved in your web browser (if it opens in Microsoft Word by default, Right Click the File -> Open With -> Google Chrome). Test everything your e-mail (make sure links work and go to the right place, formatting is correct, etc.). 
+			</p>
+
+
+			<h2><b><u>Step 3: Sending the E-Mail</u></b></h2>
+			<p>
+				<b>*** MAKE SURE YOU ARE SIGNED INTO THE E-MAIL ADDRESS WHERE YOU WANT THE E-MAIL TO SEND FROM ***</b><br />
+				Now it is time to populate a spreadsheet with e-mails and any other additional information you would like to add. Open the SAMPLE SPREADSHEET (at the top of the page). It should look something like the image below:
+
+
+				<br /><br /><img src="http://i.imgur.com/E0iaU2X.png"><br /><br />
+
+				Each column is a separate field that can represent a piece of information in your e-mail. The header cell of each column is the name of the variable you will place into your e-mail to represent that bit of information. This sample spreadsheet contains three columns, First Name, Email Address, and Mail Merge Status. <b>DO NOT remove the "Email Address" and "Mail Merge Status" columns, as they are necessary for the script to work. Also make sure that the Mail Merge Status column is clear before moving on (there are no cells that say EMAIL_SENT like in the above picture).</b> If you want to add additional information for each e-mail address (such as Last Name, Graduation Year, Major, etc.), right click on the sheet border (where it says A, B, C, etc.) and click "Insert 1 left". A completed spreadsheet could look like the image below:
+
+				<br /><br /><img src="http://i.imgur.com/ki8a1bW.png"><br /><br />
+
+				<b>*** I strongly recommend creating a spreadsheet with only two of your personal email addresses in order to test that it is sent formatted correctly. You don't want to send out a bad e-mail to 100+ people. ***</b><br />
+				Now, head over to Gmail and compose a new e-mail. Open the HTML file in your web browser (as done in Step 1), and copy and paste the contents into your e-mail draft (Ctrl + A, Ctrl + C ---> Ctrl + V into e-mail draft). To embed contents of the spreadsheet, you must use the following placeholder: 
+
+				<br /><br />$%COLUMN NAME% (examples: $%First Name%, $%Graduation Year%, $%Major%)<br /><br />
+
+				Leave the Recipients field of the e-mail blank, and change the Subject to whatever you would like (using placeholders if needed). At this point, you should have something to looks like the picture below (notice the placeholder used in the subject and body):
+
+				<br /><br /><img src="http://i.imgur.com/aXhDyFY.png"><br /><br />
+
+				Now you are ready to send the e-mail. Head back to your spreadsheet, and click the "Mail Merge" tab at the top of the page and click "Step 1: Initialize". If the script asks for authentication, allow it, and click "Step 1: Initialize" again. You should get a success confirmation message. Now click "Step 2: Start Mail Merge". Where it asks you to select a template, select the draft e-mail you just made. Put whatever you want the sender's name to be in the sender's full name field. If you would like to BCC yourself, click the checkbox. Click "Start Mail Merge" and wait until the all the rows are given a EMAIL_SENT value in the Mail Merge Status column.
+			</p>
+		</center>
+	</body>
+</html>
