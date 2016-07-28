@@ -10,7 +10,7 @@
 
     <title>MatthewDiana.com</title>
 
-    <!-- bootstrap -->
+    <!-- bootstrap css -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- my custom styling -->
@@ -39,8 +39,8 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-              <li role="presentation" class="active"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-            <li role="presentation"><a href="#">Contact</a></li>
+            <li role="presentation" class="active"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+            <li role="presentation"><a href="#contactModal" data-toggle="modal" data-target="#contactModal">Contact</a></li>
           </ul>
         </nav>
         <!-- <h3 class="text-muted">Matthew Diana</h3> -->
@@ -98,6 +98,37 @@
         <p>&copy; 2016 Matthew Diana</p>
       </footer>
 
+      <!-- Contact modal -->
+      <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="contactModalLabel">Contact Me</h4>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="recipient-name" class="control-label">To:</label>
+                  <input type="text" class="form-control" id="to-email" placeholder="matthew.a.diana@gmail.com" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="control-label">From:</label>
+                  <input type="text" class="form-control" id="from-email" placeholder="you@company.com">
+                </div>
+                <div class="form-group">
+                  <label for="message-text" class="control-label">Your Message:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div> <!-- /container -->
 
     <!-- jQuery -->
