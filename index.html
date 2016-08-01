@@ -111,7 +111,7 @@
               <h4 class="modal-title" id="contactModalLabel">Contact Me</h4>
             </div>
             <div class="modal-body">
-              <form action="https://formspree.io/matthew.a.diana@gmail.com" method="POST">
+              <form id="contactForm" action="https://formspree.io/matthew.a.diana@gmail.com" method="POST">
                 <div class="form-group">
                   <label for="my-name" class="control-label">To:</label>
                   <input type="text" class="form-control" id="to" placeholder="Matthew Diana" disabled>
@@ -126,6 +126,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button id="send" type="button" class="btn btn-primary">BootBox Test</button>
                   <!-- <button type="submit" class="btn btn-primary">Send</button> -->
                 </div>
               </form>
@@ -133,15 +134,30 @@
           </div>
         </div>
       </div>
-
     </div> <!-- /container -->
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- bootstrap js -->
     <script src="dist/js/bootstrap.min.js"></script>
-
+    <!-- bootbox js -->
+    <script src="dist/js/bootbox.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+      var message = "";
+      $("#send").on("click"), function() {
+        message = $("#contactForm").serialize();
+        $.ajax({
+          url: "//formspree.io/matthew.a.diana@gmail.com",
+          method: "POST",
+          data: {message: message},
+          dataType: "json"
+        });
+        alert('Thanks for the e-mail');
+        return false;
+      });
+    </script>
+
   </body>
 </html>
