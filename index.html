@@ -49,6 +49,7 @@
         </nav>
         <!-- <h3 class="text-muted">Matthew Diana</h3> -->
       </div>
+
       <div class="jumbotron">
         <h1>Matthew Diana</h1>
         <p class="lead">Software Engineer at IBM</p>
@@ -117,7 +118,7 @@
                 </div>
                 <div class="form-group">
                   <label for="sender-name" class="control-label">From:</label>
-                  <input type="email" name="email" class="form-control" id="from" placeholder="you@company.com" data-error="Please enter a valid e-mail" required>
+                  <input type="email" name="_replyto" class="form-control" id="from" placeholder="you@company.com" data-error="Please enter a valid e-mail" required>
                   <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
@@ -125,9 +126,25 @@
                   <textarea class="form-control" name="message" id="message-text" rows="3"></textarea>
                 </div>
                 <div class="modal-footer">
+                  <input type="text" name="_gotcha" style="display:none" />
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button id="send" type="submit" class="btn btn-primary">Send</button>
+                  <button id="sendMessage" class="btn btn-primary">Send</button>
+                  <!-- <button id="send" type="submit" class="btn btn-primary">Send</button> -->
                 </div>
+                <script>
+                  var message = "";
+                  $("#sendMessage").on("click"), function() {
+                    message = $("#contactForm").serialize();
+                    $.ajax({
+                      url: "//formspree.io/matthew.a.diana@gmail.com",
+                      method: "POST",
+                      data: {message: message},
+                      dataType: "json"
+                    });
+                    alert('Thanks for the e-mail');
+                    return false;
+                  });
+                </script>
               </form>
             </div>
           </div>
