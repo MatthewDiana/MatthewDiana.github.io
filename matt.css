@@ -4,6 +4,36 @@ body {
   padding-bottom: 20px;
 }
 
+/* Custom attributes for individual icons */
+a .fa-github {
+  color: #000;
+  font-size: 2.5em;
+  padding-top: .5em;
+}
+
+a .fa-linkedin {
+  color: #000;
+  font-size: 2.5em;
+  padding-top: .5em;
+}
+
+a .fa-stack-overflow {
+  color: #000;
+  font-size: 2.5em;
+  padding-top: .5em;
+}
+
+a .fa-bitbucket {
+  color: #000;
+  font-size: 2.5em;
+  padding-top: .5em;
+}
+
+/* Panel title icons */
+.panel-heading i {
+  float: right;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -45,10 +75,6 @@ body {
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
 }
 
 /* Supporting marketing content */
