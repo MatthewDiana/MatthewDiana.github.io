@@ -29,6 +29,11 @@ a .fa-bitbucket {
   padding-top: .5em;
 }
 
+/* Contact modal */
+.contact {
+  font-size: 1.3em;
+}
+
 /* Panel title icons */
 .panel-heading i {
   float: right;
